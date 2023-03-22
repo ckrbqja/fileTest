@@ -1,0 +1,24 @@
+
+
+POST localhost:8080/aa
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="test.png"
+
+< F:\Users\test\text.txt
+--WebAppBoundary--
+
+### ffff
+POST localhost:8080/aa
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="element-name"
+Content-Type: text/plain
+
+--WebAppBoundary
+Content-Disposition: form-data; name="file"; filename="text.txt"
+
+< F:\Users\test\text.txt
+--WebAppBoundary--
